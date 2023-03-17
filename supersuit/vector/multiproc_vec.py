@@ -227,9 +227,6 @@ class ProcConcatVec(gymnasium.vector.VectorEnv):
         self.step_async(actions)
         return self.step_wait()
 
-    def __del__(self):
-        self.close()
-
     def render(self):
         self.pipes[0].send("render")
         render_result = self.pipes[0].recv()
