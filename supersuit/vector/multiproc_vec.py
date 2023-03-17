@@ -120,10 +120,6 @@ class ProcConcatVec(gymnasium.vector.VectorEnv):
         metadata,
         graceful_shutdown_timeout=None,
     ):
-        raise NotImplementedError(
-            "The wrapper ProcConcatVec is temporarily depreciated whilst it is being debugged. "
-            "Please refer to https://github.com/Farama-Foundation/SuperSuit/pull/165 for more information, or to contact the devs in regard to this."
-        )
         self.observation_space = observation_space
         self.action_space = action_space
         self.num_envs = num_envs = tot_num_envs
